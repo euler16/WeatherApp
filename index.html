@@ -1,30 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-       #map {
-        height: 400px;
-        width: 100%;
-       }
-    </style>
+    <link rel="stylesheet" type="text/css" href="weather.css">
   </head>
   <body>
-    <h3>My Google Maps Demo</h3>
+    <h3>Weather App</h3>
     <div id="map"></div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+ 
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEgt9ufQCPvJFomFOo5LquHdLNPk-PDTA&callback=initMap"></script>
+    <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js" type="text/javascript" ></script>
+    <script src="weather.js"></script>
     <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
+      window.onload = function() {
+          initMap();
       }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0LjXq6lFJdMLHJx5rX2aXFqOP-LZAAxs&callback=initMap">
     </script>
   </body>
 </html>
