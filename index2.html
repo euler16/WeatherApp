@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+            z-index: 100;
+        }
+        #info {
+            z-index: 100;
+            /*!*width: 800px;*!*/
+            /*!*height: 200px;*!*/
+            /*display: flex;*/
+            /*flex-direction: row;*/
+            /*flex-wrap: wrap;*/
+            /*!*text-align: center;*!*/
+            /*!*align-content: center;*!*/
+        }
+        .jumbotron{
+            background-image: url("clouds.jpg");
+            text-align: center;
+            z-index: 100;
+        }
+        /*body {*/
+            /*background-image: url("ws_Simple_Clouds_1920x1080.jpg");*/
+            /*!*background-repeat: no-repeat;*!*/
+        /*}*/
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js">
+
+    </script>
+</head>
+<body>
+<div>
+
+    <div class="row">
+        <div class="col-1">
+
+        </div>
+        <div class="col-10">
+            <div class="jumbotron">
+                <h1 class="display-3">Weather Forecast</h1>
+            </div>
+            <div id="map"></div>
+
+        </div>
+        <div class="col-1">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-3">
+
+        </div>
+        <div class="col-6">
+
+            <div id="info">
+
+            </div>
+        </div>
+        <div class="col-3">
+
+        </div>
+    </div>
+</div>
+
+<script
+        src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+        crossorigin="anonymous"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMuAIlfUaDy4AMd1b-PcrMCEhEalJ2yZk&callback=initMap">
+</script>
+<script src="test.js"></script>
+
+</body>
+</html>
